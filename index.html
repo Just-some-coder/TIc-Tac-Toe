@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section id ="homeScreen">
+        <div id="mainScreen">
+            <div id = "logo">
+                X O
+            </div>
+
+            <div id="gameStart">
+                <h2><strong>CHOOSE MODE</strong></h2>
+                <button class="gameButton" onclick="getGridSize()"><strong>PLAYER</strong></button>
+                <button class ="gameButton"><strong>AI</strong></button>
+            </div>
+        </div>
+    </section>
+
+    <section id ="selectGridSize">
+        <div id="gridInput">
+            <h2>SELECT GRID SIZE</h2>
+            <button id="increaseGrid" onclick="increaseGridSize()">
+                <svg width="256" height="256" viewBox="0 0 24 24"><path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"></path></svg>
+            </button>
+            <h2 id="gridSize">3</h2>
+            <button id="decreaseGrid" onclick="decreaseGridSize()">
+                <svg width="206" height="206" viewBox="0 0 24 24"><path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path></svg>
+            </button>
+
+            <button id="gameStartButton" onclick="launchTwoPlayer()">START</button>
+        </div>
+    </section>
+
+    <section id = "game">
+        <div id = "scoreBoard">
+            <h1 id="score_x">Player 1 <br> Score: 0</h1>
+            <h1 id="gameWinner"></h1>
+            <h1 id="score_y">Player 2 <br> Score: 0</h1>
+        </div>
+        <div id ="tic-tac-toe">
+
+        </div>
+        <div>
+            <button id ="restart" onclick="newGame()">Restart</button>
+        </div>
+    </section>
+</body>
+<script src="index.js">
+</script>
+</html>
